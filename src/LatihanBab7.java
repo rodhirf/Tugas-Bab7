@@ -1,17 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author irwin deriyan
- */
-public class LatihanBab1 {
-    public static void main(String[] args) {
-        System.out.println("tess");
-        
-        
-    }
-    
+public abstract class Salon {
+    public double total,hargaP=0,hargaJ=0,harga;
+    private String nama,jenis;
+    String RinciPro="", RinciLay="";
+    public abstract double getTotalHarga();
+    public abstract void setProduk(int a, int b, String c);
+    public abstract void setJasa(int a, String b);
+    public void setNama(String a){
+        nama=a;    }
+    public String getNama(){
+        return nama;}
+    public String getJenis(){
+        return jenis;    }
+    public void setJenis(String a){
+     jenis=a;    
+	
+	}
 }
