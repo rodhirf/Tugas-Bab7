@@ -93,6 +93,45 @@ class Gold extends Salon {
 	 }
 }
 //==========================================================================
+class Silver extends Salon {
+    public double getTotalHarga() {
+        return total = hargaP + hargaJ;    }
+    public void setProduk(int a, int b, String c) {
+        RinciPro += c +"\n";
+        if (a==1) {
+            hargaP += (50000 - (50000 * 0.1)) * b;
+        } else if (a==2) {
+            hargaP += (40000 - (40000 * 0.1)) * b;
+        } else if (a==3) {
+            hargaP += (30000 - (30000 * 0.1)) * b;
+        } else if (a==4) {
+            hargaP += (20000 - (20000 * 0.1)) * b;
+        } else if (a==5) {
+            hargaP += (10000 - (10000 * 0.1)) * b;   } }
+    public void setJasa(int a, String b) {
+        RinciLay += b +"\n";
+        if (a==1) {
+            hargaJ += (35000 - (35000 * 0.1));
+        } else if (a==2) {
+            hargaJ += (30000 - (30000 * 0.1));
+        } else if (a==3) {
+            hargaJ += (15000 - (15000 * 0.1));
+        } else if (a==4) {
+            hargaJ += (10000 - (10000 * 0.1));   } }
+    public void tampil() {
+        System.out.println("=============TAGIHAN PEMBAYARAN============");
+        System.out.println("Nama Anda                : " + getNama());       System.out.println("===========================================");
+        System.out.print("Rincian Belanja Produk   : "
+                + "\n"+RinciPro);
+        System.out.print("Rincian Belanja Jasa     : "
+                + "\n"+RinciLay);
+        System.out.println("Harga Yang Harus Dibayar : Rp. " + getTotalHarga());
+        System.out.println("================TERIMA KASIH==============="); System.out.println("===========================================");
+    
+	}
+}
+//==========================================================================
+
 
 
 
